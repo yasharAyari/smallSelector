@@ -175,7 +175,7 @@ function _css(css){
 /**
  * create instance of selcetor function
 */
-var _ = function (query){
+var $ = function (query){
   var targetElementDOM = null;
   if (typeof (query) === 'string') {
       //if given parameter is a css query selector
@@ -190,7 +190,7 @@ var _ = function (query){
     }
 }
 
-_.fn = selector.prototype = {
+$.fn = selector.prototype = {
   addClass: function(className){
     _addClass.call(this, className);
     return this;
