@@ -1,0 +1,28 @@
+{
+  "name": "smallSelector",
+  "version": "0.1.0",
+  "homepage": "https://github.com/yasharAyari/smallSelector",
+  "authors": [
+    "yashar ayari"
+  ],
+  "description": "A DOM utility helper",
+  "main": "src/smallSelector.js",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "javascript",
+    "jQuery",
+    "replacement",
+    "DOM"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
