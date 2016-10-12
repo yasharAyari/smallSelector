@@ -129,3 +129,78 @@ $("p#large").toggleClass('small tiny')
   // →  returns a $ object
 
 ```
+------------------------------------------------
+<a name="api-show"></a>
+### $().show([type])
+
+`$.show()` sets a given element or set of elements' `display` style property. By passing in an optional `type` argument, you can specify the attribute of the `display` property $ gives the element(s).
+
+* `type` is an *optional* argument. It is the display type you wish to
+utilize.
+
+If you specify an unsupported `type` (i.e. something other than `block`, `compact`, `inline-block`, `inline`, `inline-table`, `list-item`, `run-in`, `table`, `table-caption`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, or `table-row-group`), $ will ignore the invalid `type`.
+
+#### Examples
+
+``` js
+
+$("p.test").show()
+  // html is now <p class="test" style>I was hidden</p>
+  // →  returns a $ object
+
+$("p#test").show('inline-block')
+  // html is now <p  id="test"style="display: inline-block;">I was hidden</p>
+  // →  returns a $ object
+
+```
+
+------------------------------------------------
+<a name="api-hide"></a>
+### $().hide()
+
+`$.hide()` adds a `display: none;` to the specified element.
+
+#### Examples
+
+``` js
+
+$("p").hide()
+  // html is now <p style="display: none;">Hello, world</p>
+  // →  returns a $ object
+
+```
+------------------------------------------------
+<a name="api-css"></a>
+### $().css(hash)
+Sets CSS properties of the element. If a single hash argument is passed, then the CSS property corresponding to each property is set to the value designated by the hash property's value.
+```js
+$(elem).css({
+  background: 'blue',
+  color: green;
+}); // "green"
+```
+------------------------------------------------
+<a name="api-find"></a>
+### $().find(Dom element | selector)
+find given Dom object inside the target element and return array of finded Dom object.
+
+
+```js
+<ul id="myId">
+  <li>item 1</li>
+  <li>item 2</li>
+</ul>
+$('#myId').fin('li'); 
+// →  returns list of to li elements
+```
+------------------------------------------------
+<a name="api-attr"></a>
+### $().attr(key[, value] | hash)
+Sets or returns attributes of the element. If the first argument is a hash, then each property of the hash is read and the corresponding attribute of the element is set to the hash property's value. If the first argument is a string and no second argument is provided, the value of the element's attribute with the same name is returned. If a second argument *is* supplied, then the element's attribute of the same name as the first argument is set to the value of the second argument.
+```js
+$('p').attr('id', 'myId'); 
+//  html is now <p id="myId">Hello, world</p>
+// →  returns a $ object
+$(p).attr('id'); // 
+// →  returns a value of id attribute
+```
