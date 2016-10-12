@@ -28,7 +28,7 @@
     }else{
         for (var i = this.target.length - 1; i >= 0; i--) {
           this.target[i].className = this.target[i].className.replace(className,'');
-        };
+        }
     }
   }
 
@@ -48,7 +48,7 @@
               classString += ' ' + className;
           }
           this.target[i].className = classString;
-        };
+        }
     }
   }
 
@@ -68,7 +68,7 @@
               classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
           }
           this.target[i].className = classString;
-        };
+        }
   }
 
   /**
@@ -83,10 +83,10 @@
     for (var i = _target.length - 1; i >= 0; i--) {
       var current = _target[i];
           current = current.querySelectorAll(query);
-      for(var i = current.length - 1; i>= 0 ; i--){
-        this.target.push(current[i]);
+      for(var j = current.length - 1; j>= 0 ; j--){
+        this.target.push(current[j]);
       }
-    };
+    }
 
   }
 
@@ -104,7 +104,7 @@
       } else if(window.attachEvent) { // IE
         this.target[i].attachEvent('on' + type, expression);
       } else return false;
-    };
+    }
   }
 
   /**
@@ -119,7 +119,7 @@
       if(window.addEventListener) { // Standard
         this.target[i].removeEventListener(type, expression, bubbling);
       }
-    };
+    }
   }
 
   /**
@@ -164,6 +164,21 @@
         this.target[i].innerHTML = html;
       }
   }
+  /**
+   * @name attr
+   * @private
+   * @action change Attribute of selected DOM element
+  */
+  function _attr(attr, value){
+    if(value){
+      for (var i = this.target.length - 1; i >= 0; i--) {
+        this.target[i].setAttribute(attr, value);
+      }
+    }else{
+      return this.target[0].getAttribute(attr);
+    }
+      
+  }
 
   /**
    * @name css
@@ -171,7 +186,7 @@
    * @action change style of selected DOM element
   */
   function _css(css){
-    var cssKeys = Object.keys(css);console.log(cssKeys)
+    var cssKeys = Object.keys(css);
       for (var i = this.target.length - 1; i >= 0; i--) {
         for (var j = cssKeys.length - 1; j >= 0; j--) {
           if(typeof(css[cssKeys[j]]) === 'number'){
@@ -191,13 +206,13 @@
         targetElementDOM = document.querySelectorAll(query);
       } else if (typeof (query) === 'object') {
         //if given parameter is a DOM object
-        targetElementDOM = []
+        targetElementDOM = [];
         targetElementDOM.push(query);
       } 
-      if (targetElementDOM != null) {
+      if (targetElementDOM !== null) {
         return new smallSelector(targetElementDOM);
       }
-  }
+  };
 
   $.fn = smallSelector.prototype = {
     version: '0.1.0',
@@ -241,6 +256,10 @@
       _css.call(this,css);
       return this;
     },
+    attr: function(attr, value){
+      _attr.call(this,attr, value);
+      return this;
+    },
     html: function(html){
       if(html){
         _html.call(this, html);
@@ -256,6 +275,6 @@
         }
       }
     }
-  }
+  };
   return $;
 }));

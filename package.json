@@ -1,0 +1,24 @@
+{
+  "name": "yashar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/smallSelector.js",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "DOM",
+    "jquery"
+  ],
+  "author": "yashar ayari",
+  "license": "MIT"
+}
