@@ -1,5 +1,5 @@
 # Small selector  home page
-this is a small and modern library for manipulating Dom. it has all common functions of jQuery but its size is only 3 KB(minified) . this library uses document query selector. you can use it like jQuery beacuse it syntax is as same as jquery.
+A small and modern library for manipulating Dom. it has all common functions of jQuery but its size is only 3 KB(minified) . this library uses document query selector. you can use it like jQuery beacuse it syntax is as same as jquery.
 
 **It looks like this:**
 
@@ -182,7 +182,7 @@ $(elem).css({
 ------------------------------------------------
 <a name="api-find"></a>
 ### $().find(Dom element | selector)
-find given Dom object inside the target element and return array of finded Dom object.
+Find given Dom object inside the target element and return array of finded Dom object.
 
 
 ```js
@@ -203,4 +203,44 @@ $('p').attr('id', 'myId');
 // →  returns a $ object
 $(p).attr('id'); // 
 // →  returns a value of id attribute
+```
+------------------------------------------------
+<a name="api-remove"></a>
+### $().remove()
+`$.remove()` removes the initial supplied collection from the DOM
+
+#### Examples
+``` js
+$(document.querySelectorAll('p')).remove()
+```
+------------------------------------------------
+<a name="api-on"></a>
+### $().on([event],[handler])
+`$.on()` Attach an event handler function for one or more events to the selected elements.
+
+#### Examples
+``` js
+function handler() {
+  console.log('handler');
+}
+ 
+$('#test').on('click', handler);
+
+$("h3").on('click',function(event){
+  console.log(event)
+})
+```
+------------------------------------------------
+<a name="api-off"></a>
+### $().on([event],[handler])
+`$.on()` Attach an event handler function for one or more events to the selected elements.
+
+#### Examples
+``` js
+function handler() {
+  console.log('handler');
+}
+ 
+$('#test').on('click', handler);
+$('#test').off('click', handler);
 ```
