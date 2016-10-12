@@ -227,7 +227,7 @@ function handler() {
 $('#test').on('click', handler);
 
 $("h3").on('click',function(event){
-  console.log(event)
+  $(this).addClass('active');
 })
 ```
 ------------------------------------------------
