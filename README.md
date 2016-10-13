@@ -1,5 +1,5 @@
 # Small selector  home page
-A small and modern library for manipulating Dom. it has all common functions of jQuery but its size is only 3 KB(minified) . this library uses document query selector. you can use it like jQuery beacuse it syntax is as same as jquery.
+A small and modern library for manipulating Dom. It has all common functions of jQuery but its size is only 3 KB(minified) . This library uses document query selector.It can be used instead of jQuery beacuse of their similarity in their syntax.
 
 **It looks like this:**
 
