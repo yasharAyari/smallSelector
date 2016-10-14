@@ -34,17 +34,19 @@ $ git clone https://github.com/yasharAyari/smallSelector.git
 ### Usages
 This can then be used:
 1. In AMD (e.g. with requireJS):
+
 ```js
 requirejs(['$'], function($) {
     $('#myID').addClass('test');
 });
 ```
 2. In commonJS (e.g. nodeJS):
+
 ```js
 var $ = require('./$');
 $('#myID').addClass('test');
-
 ```
+
 3. Globally (e.g. in HTML):
 ```js
 <script src="smallSelector.js"></script>
@@ -69,8 +71,7 @@ $('#myID').addClass('test');
 
   * <a href="#api-on"><code>$().<b>on()</b></code></a>
   * <a href="#api-off"><code>$().<b>off()</b></code></a>
-
-```------------------------------------------------
+------------------------------------------------
 
 <a name="api-html"></a>
 ### $().html([content])
