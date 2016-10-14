@@ -49,8 +49,7 @@ $('#myID').addClass('test');
 ```js
 <script src="smallSelector.js"></script>
 <script>$('#myID').addClass('test');</script>
-```
-------------------------------------------------
+```------------------------------------------------
 <a name="instance"></a>
 ### Methods
 
