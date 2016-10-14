@@ -15,7 +15,7 @@ $(elements)
 ```
 ### Installation
 
-Download Angular Validate:
+Download smallSelector:
 
 - With Bower:
 
