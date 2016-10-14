@@ -30,6 +30,7 @@ $ git clone https://github.com/yasharAyari/smallSelector.git
 ```
 
 - Or manually downloading the [latest release](https://github.com/yasharAyari/smallSelector/archive/master.zip).
+
 ### Usages
 This can then be used:
 1. In AMD (e.g. with requireJS):
