@@ -49,10 +49,11 @@ $('#myID').addClass('test');
 
 3. Globally (e.g. in HTML):
 
-```html
+```js
 <script src="smallSelector.js"></script>
 <script>$("#myID").addClass("test")</script>
-```------------------------------------------------
+```
+------------------------------------------------
 <a name="instance"></a>
 ### Methods
 
