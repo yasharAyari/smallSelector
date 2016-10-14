@@ -8,13 +8,50 @@ $(elements)
   .hide()
   .addClass('foo')
   .css({
-    color: 'red',
-    'background-color': 'white'
+    color: '#ff0000',
+    'background-color': '#ffffff'
   })
   .show()
 ```
+### Installation
+
+Download Angular Validate:
+
+- With Bower:
+
+```sh
+$ bower install smallSelector
+```
+
+- With Git:
+
+```sh
+$ git clone https://github.com/yasharAyari/smallSelector.git
+```
+
+- Or manually downloading the [latest release](https://github.com/yasharAyari/smallSelector/archive/master.zip).
+### Usages
+This can then be used:
+1. In AMD (e.g. with requireJS):
+```js
+requirejs(['$'], function($) {
+    $('#myID').addClass('test');
+});
+```
+2. In commonJS (e.g. nodeJS):
+```js
+var $ = require('./$');
+$('#myID').addClass('test');
+
+```
+3. Globally (e.g. in HTML):
+```js
+<script src="smallSelector.js"></script>
+<script>$('#myID').addClass('test');</script>
+```
+------------------------------------------------
 <a name="instance"></a>
-### Instance methods
+### Methods
 
 
   * <a href="#api-html"><code>$().<b>html()</b></code></a>
@@ -33,8 +70,8 @@ $(elements)
   * <a href="#api-on"><code>$().<b>on()</b></code></a>
   * <a href="#api-off"><code>$().<b>off()</b></code></a>
 
-<a name="static"></a>
-```------------------------------------------------
+```
+------------------------------------------------
 
 <a name="api-html"></a>
 ### $().html([content])
