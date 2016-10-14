@@ -48,13 +48,13 @@ $('#myID').addClass('test');
 ```
 
 3. Globally (e.g. in HTML):
-```js
+
+```html
 <script src="smallSelector.js"></script>
 <script>$('#myID').addClass('test');</script>
 ```------------------------------------------------
 <a name="instance"></a>
 ### Methods
-
 
   * <a href="#api-html"><code>$().<b>html()</b></code></a>
   * <a href="#api-addClass"><code>$().<b>addClass()</b></code></a>
@@ -71,6 +71,7 @@ $('#myID').addClass('test');
 
   * <a href="#api-on"><code>$().<b>on()</b></code></a>
   * <a href="#api-off"><code>$().<b>off()</b></code></a>
+  
 ------------------------------------------------
 
 <a name="api-html"></a>
